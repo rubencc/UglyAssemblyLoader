@@ -4,7 +4,7 @@
     using System.IO;
     using System.Linq;
     using System.Reflection;
-    public class Loader : ILoader
+    public class AssemblyLoader : IAssemblyLoader
     {
         public void LoadAssemblies<TType>(Action<TType> buildAction)
             where TType : class
