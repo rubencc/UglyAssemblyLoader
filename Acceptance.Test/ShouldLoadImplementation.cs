@@ -6,7 +6,7 @@
     {
         public void ExampleMethod(string value)
         {
-            Console.WriteLine($"Executin class: {nameof(ShouldLoadImplementation)} with value {value}");
+            Console.WriteLine($"Executin class: {nameof(ShouldLoadImplementation)} with value: {value}");
         }
     }
 }
