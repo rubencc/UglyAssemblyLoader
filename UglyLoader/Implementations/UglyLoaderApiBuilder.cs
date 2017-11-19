@@ -4,7 +4,7 @@
 
     public sealed class UglyLoaderApiBuilder
     {
-        IUglyLoaderApi<TType> Build<TType>()
+        public static IUglyLoaderApi<TType> Build<TType>()
             where TType : class
         {
             return new UglyLoaderApi<TType>();
