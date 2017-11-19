@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementations\Loader.cs" />
-    <Compile Include="Interfaces\ILoader.cs" />
+    <Compile Include="Implementations\AssemblyLoader.cs" />
+    <Compile Include="Implementations\UglyLoaderApi.cs" />
+    <Compile Include="Implementations\UglyLoaderApiBuilder.cs" />
+    <Compile Include="Interfaces\IAssemblyLoader.cs" />
+    <Compile Include="Interfaces\IUglyApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
