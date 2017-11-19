@@ -1,4 +1,4 @@
-﻿namespace UglyLoader.Implementations
+﻿namespace UglyLoader
 {
     using Interfaces;
 
