@@ -4,10 +4,10 @@
 
     public sealed class UglyLoaderApiBuilder
     {
-        public static IUglyLoaderApi<TType> Build<TType>()
-            where TType : class
+        public static IUglyLoaderApi Build()
+           
         {
-            return new UglyLoaderApi<TType>();
+            return new UglyLoaderApi();
         }
     }
 }

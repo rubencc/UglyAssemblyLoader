@@ -2,10 +2,10 @@
 {
     using System;
 
-    public interface IUglyLoaderApi<out TType>
-        where TType : class
+    public interface IUglyLoaderApi
+        
     {
-        IUglyLoaderApi<TType> UsePath(string path);
-        void LoadAssemblies(Action<TType> buildAction);
+        IUglyLoaderApi UsePath(string path);
+        IUglyLoaderApi LoadAssemblies<TType>(Action<TType> buildAction) where TType : class;
     }
 }

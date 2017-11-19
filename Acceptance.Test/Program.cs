@@ -7,8 +7,10 @@
     {
         static void Main(string[] args)
         {
-            UglyLoaderApiBuilder.Build<IShouldLoad>()
-                .LoadAssemblies(act => act.ExampleMethod("it works"));
+            UglyLoaderApiBuilder.Build()
+                .LoadAssemblies<IShouldLoad>(act => act.ExampleMethod("it works"))
+                .LoadAssemblies<IShouldLoadToo>(act => act.AnotherMethod());
+
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();

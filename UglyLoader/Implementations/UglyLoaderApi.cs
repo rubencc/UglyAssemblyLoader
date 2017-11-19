@@ -3,8 +3,8 @@
     using System;
     using Interfaces;
 
-    internal sealed class UglyLoaderApi<TType> : IUglyLoaderApi<TType>
-        where TType : class
+    internal sealed class UglyLoaderApi: IUglyLoaderApi
+        
     {
         private string pathFiles;
         private readonly IAssemblyLoader loader;
@@ -14,7 +14,7 @@
             this.loader = new AssemblyLoader();
         }
 
-        public IUglyLoaderApi<TType> UsePath(string path)
+        public IUglyLoaderApi UsePath(string path)
         {
             if(String.IsNullOrEmpty(path))
                 throw new ArgumentException("null path");
@@ -23,7 +23,7 @@
             return this;
         }
 
-        public void LoadAssemblies(Action<TType> buildAction)
+        public IUglyLoaderApi LoadAssemblies<TType>(Action<TType> buildAction) where TType : class
         {
             if (String.IsNullOrEmpty(this.pathFiles))
             {
@@ -33,6 +33,8 @@
             {
                 this.loader.LoadAssemblies(buildAction, this.pathFiles);
             }
+
+            return this;
         }
     }
 }
