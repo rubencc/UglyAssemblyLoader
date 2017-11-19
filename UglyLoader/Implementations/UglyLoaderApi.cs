@@ -1,7 +1,6 @@
 ﻿namespace UglyLoader
 {
     using System;
-    using Interfaces;
 
     internal sealed class UglyLoaderApi: IUglyLoaderApi
         

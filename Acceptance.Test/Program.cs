@@ -1,7 +1,7 @@
 ﻿namespace Acceptance.Test
 {
     using System;
-    using UglyLoader.Implementations;
+    using UglyLoader;
 
     class Program
     {
