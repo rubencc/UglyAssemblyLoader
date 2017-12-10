@@ -9,14 +9,14 @@
         public void LoadAssemblies<TType>(Action<TType> buildAction)
             where TType : class
         {
-            this.PreloadUnusedAssemblies(AppDomain.CurrentDomain);
+            this.LoadNotUsedAssemblies(AppDomain.CurrentDomain);
 
             this.Load(buildAction);
         }
 
         public void LoadAssemblies<TType>(Action<TType> buildAction, string path) where TType : class
         {
-            this.PreloadUnusedAssemblies(AppDomain.CurrentDomain, path);
+            this.LoadNotUsedAssemblies(AppDomain.CurrentDomain, path);
 
             this.Load(buildAction);
         }
@@ -33,25 +33,29 @@
                     if (item.IsAbstract)
                         continue;
 
-                    if (item.GetInterfaces().Contains(typeof(TType)))
-                    {
-                        Type[] argTypes = new Type[] { };
-                        ConstructorInfo cInfo = item.GetConstructor(argTypes);
-                        if (cInfo == null)
-                            continue;
+                    if (!item.GetInterfaces().Contains(typeof(TType)))
+                        continue;
 
-                        var loadedType = (TType)cInfo.Invoke(new object[] { });
-                        buildAction.Invoke(loadedType);
-                    }
+                    Type[] argTypes = new Type[] { };
+                    ConstructorInfo cInfo = item.GetConstructor(argTypes);
+                    if (cInfo == null)
+                        continue;
+
+                    var loadedType = (TType)cInfo.Invoke(new object[] { });
+                    buildAction.Invoke(loadedType);
+
                 }
             }
         }
 
-        private void PreloadUnusedAssemblies(AppDomain appDomain, string path)
+        private void LoadNotUsedAssemblies(AppDomain appDomain, string path = null)
         {
-            var loaded = appDomain.GetAssemblies();
-            var directory = new DirectoryInfo(path);
-            var assemblies = directory.GetFiles("*.dll");
+            Assembly[] loaded = appDomain.GetAssemblies();
+
+            string loadPath = String.IsNullOrEmpty(path) ? appDomain.SetupInformation.ApplicationBase : path;
+
+            DirectoryInfo directory = new DirectoryInfo(loadPath);
+            FileInfo[] assemblies = directory.GetFiles("*.dll");
             if (!assemblies.Any())
             {
                 return;
@@ -59,26 +63,7 @@
 
             foreach (var info in assemblies)
             {
-                if (!loaded.Any(assembly => !assembly.IsDynamic && assembly.Location.Contains(info.Name)))
-                {
-                    appDomain.Load(AssemblyName.GetAssemblyName(info.FullName));
-                }
-            }
-        }
-
-        private void PreloadUnusedAssemblies(AppDomain appDomain)
-        {
-            var loaded = appDomain.GetAssemblies();
-            var directory = new DirectoryInfo(appDomain.SetupInformation.ApplicationBase);
-            var assemblies = directory.GetFiles("*.dll");
-            if (!assemblies.Any())
-            {
-                return;
-            }
-
-            foreach (var info in assemblies)
-            {
-                if (!loaded.Any(assembly => !assembly.IsDynamic && assembly.Location.Contains(info.Name)))
+                if (!loaded.Any(x => !x.IsDynamic && x.Location.Contains(info.Name)))
                 {
                     appDomain.Load(AssemblyName.GetAssemblyName(info.FullName));
                 }
