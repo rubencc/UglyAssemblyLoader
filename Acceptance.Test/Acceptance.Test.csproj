@@ -53,9 +53,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UglyLoader\UglyLoader.csproj">
-      <Project>{2f55cfbd-9a2c-4d34-979a-03551b3b57df}</Project>
-      <Name>UglyLoader</Name>
+    <ProjectReference Include="..\UglyLoader.Net.Standar\UglyLoader.Net.Standar.csproj">
+      <Project>{d98b66a4-137c-427b-926a-cb3de2f67ec2}</Project>
+      <Name>UglyLoader.Net.Standar</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -52,7 +52,7 @@
         {
             Assembly[] loaded = appDomain.GetAssemblies();
 
-            string loadPath = String.IsNullOrEmpty(path) ? appDomain.SetupInformation.ApplicationBase : path;
+            string loadPath = String.IsNullOrEmpty(path) ? appDomain.BaseDirectory : path;
 
             DirectoryInfo directory = new DirectoryInfo(loadPath);
             FileInfo[] assemblies = directory.GetFiles("*.dll");
