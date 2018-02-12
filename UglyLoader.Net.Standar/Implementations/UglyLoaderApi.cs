@@ -1,4 +1,5 @@
-﻿namespace UglyLoader
+﻿[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("UglyLoader.Unit.Test")]
+namespace UglyLoader
 {
     using System;
 

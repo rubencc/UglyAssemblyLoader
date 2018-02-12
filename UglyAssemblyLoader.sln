@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acceptance.Test", "Acceptance.Test\Acceptance.Test.csproj", "{DB5C19F2-4FF6-4857-89D9-8402B82F40F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyLoader.Net.Standar", "UglyLoader.Net.Standar\UglyLoader.Net.Standar.csproj", "{D98B66A4-137C-427B-926A-CB3DE2F67EC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UglyLoader.Net.Standar", "UglyLoader.Net.Standar\UglyLoader.Net.Standar.csproj", "{D98B66A4-137C-427B-926A-CB3DE2F67EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyLoader.Unit.Test", "UglyLoader.Unit.Test\UglyLoader.Unit.Test.csproj", "{0AC3B357-38CE-46C0-9985-B883E42130D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
