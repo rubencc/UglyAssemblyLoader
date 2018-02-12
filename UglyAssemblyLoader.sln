@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UglyLoader.Net.Standar", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyLoader.Unit.Test", "UglyLoader.Unit.Test\UglyLoader.Unit.Test.csproj", "{0AC3B357-38CE-46C0-9985-B883E42130D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Example", "Autofac.Example\Autofac.Example.csproj", "{252B8825-9450-4986-A141-66D0AA6448F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AC3B357-38CE-46C0-9985-B883E42130D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252B8825-9450-4986-A141-66D0AA6448F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252B8825-9450-4986-A141-66D0AA6448F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252B8825-9450-4986-A141-66D0AA6448F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252B8825-9450-4986-A141-66D0AA6448F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
