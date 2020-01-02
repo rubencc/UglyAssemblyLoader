@@ -6,7 +6,7 @@
     {
         public void ExampleMethod(string value)
         {
-            Console.WriteLine($"Executin class: {nameof(AnotherClassToLoad)} with value: {value}");
+            Console.WriteLine($"Execute class: {nameof(AnotherClassToLoad)} with value: {value}");
         }
 
         public void AnotherMethod()

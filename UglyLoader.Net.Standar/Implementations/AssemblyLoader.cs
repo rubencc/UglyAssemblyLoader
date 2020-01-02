@@ -38,11 +38,11 @@ namespace UglyLoader
                         continue;
 
                     Type[] argTypes = new Type[] { };
-                    ConstructorInfo cInfo = item.GetConstructor(argTypes);
-                    if (cInfo == null)
+                    ConstructorInfo constructor = item.GetConstructor(argTypes);
+                    if (constructor == null)
                         continue;
 
-                    var loadedType = (TType)cInfo.Invoke(new object[] { });
+                    var loadedType = (TType)constructor.Invoke(new object[] { });
                     buildAction.Invoke(loadedType);
 
                 }

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net471;net47;net462;net461;net46;net452;net451;net45;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net48;net471;net47;net462;net461;net46;net452;net451;net45;net40</TargetFrameworks>
     <Version>0.6.2</Version>
     <PackageId>Ugly.Assembly.Loader</PackageId>
     <Authors>Ruben C.C.</Authors>
@@ -10,7 +10,6 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Ugly Assembly Loader is a helper that provides the funcionality for load on each execution all the dlls of your project that implements an especific interface in case for example that you need to configure an IoC container in diferents points of your code.</Description>
     <PackageProjectUrl>https://github.com/rubencc/UglyAssemblyLoader</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/rubencc/UglyAssemblyLoader/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/rubencc/UglyAssemblyLoader</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageTags>IoC, assemlies, loader, container</PackageTags>

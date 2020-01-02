@@ -1,6 +1,4 @@
-﻿
-
-namespace Autofac.Example
+﻿namespace Autofac.Example
 {
     public interface IRandomGenerator
     {
