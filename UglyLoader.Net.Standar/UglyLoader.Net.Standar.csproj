@@ -15,6 +15,7 @@
     <PackageTags>IoC, assemlies, loader, container</PackageTags>
     <AssemblyName>UglyLoader</AssemblyName>
     <RootNamespace>UglyLoader</RootNamespace>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
 </Project>
