@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1;net48;net471;net47;net462;net461;net46;net452;net451;net45;net40;netcoreapp3.1;net5.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net48;net471;net47;net462;net461;net46;net452;net451;net45;net40;netcoreapp2.1;netcoreapp3.1;net5.0</TargetFrameworks>
     <Version>0.7.0</Version>
     <PackageId>Ugly.Assembly.Loader</PackageId>
     <Authors>Ruben C.C.</Authors>
