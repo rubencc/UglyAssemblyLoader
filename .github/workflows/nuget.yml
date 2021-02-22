@@ -17,3 +17,5 @@ jobs:
         dotnet-version: 5.0.x
     - name: Build
       run: dotnet build --configuration PublishNuget
+    - name: Publish packages
+      run: dotnet nuget push ./**.nupkg --source nuget.org --api-key ${{secrets.NUGET_TOKEN}}
