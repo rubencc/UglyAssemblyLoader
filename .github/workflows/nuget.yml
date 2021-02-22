@@ -1,7 +1,7 @@
 name: Publish nuget
 on: [workflow_dispatch]
 jobs:
-  build:
+  Publish:
 
     runs-on: windows-latest
 
@@ -18,4 +18,4 @@ jobs:
     - name: Build
       run: dotnet build --configuration PublishNuget
     - name: Publish packages
-      run: dotnet nuget push ./**.nupkg --source nuget.org --api-key ${{secrets.NUGET_TOKEN}}
+      run: dotnet nuget push **.nupkg --source nuget.org --api-key ${{secrets.NUGET_TOKEN}}
