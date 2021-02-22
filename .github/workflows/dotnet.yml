@@ -1,4 +1,4 @@
-name: .NET
+name: Build netcoreapp3.1 and run test
 
 on:
   push:
