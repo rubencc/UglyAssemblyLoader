@@ -66,7 +66,14 @@ namespace UglyLoader
             {
                 if (!loaded.Any(x => !x.IsDynamic && x.Location.Contains(info.Name)))
                 {
-                    appDomain.Load(AssemblyName.GetAssemblyName(info.FullName));
+                    try
+                    {
+                        appDomain.Load(AssemblyName.GetAssemblyName(info.FullName));
+                    }
+                    catch (Exception e)
+                    {
+                        // ignored
+                    }
                 }
             }
         }
