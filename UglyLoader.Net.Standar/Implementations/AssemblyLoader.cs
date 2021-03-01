@@ -70,7 +70,7 @@ namespace UglyLoader
                     {
                         appDomain.Load(AssemblyName.GetAssemblyName(info.FullName));
                     }
-                    catch (Exception e)
+                    catch
                     {
                         // ignored
                     }
