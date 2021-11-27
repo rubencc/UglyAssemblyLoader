@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acceptance.Test", "Acceptance.Test\Acceptance.Test.csproj", "{DB5C19F2-4FF6-4857-89D9-8402B82F40F3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UglyLoader.Net.Standar", "UglyLoader.Net.Standar\UglyLoader.Net.Standar.csproj", "{D98B66A4-137C-427B-926A-CB3DE2F67EC2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Example", "Autofac.Example\Autofac.Example.csproj", "{252B8825-9450-4986-A141-66D0AA6448F9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UglyLoader.Unit.Test", "UglyLoader.Unit.Test\UglyLoader.Unit.Test.csproj", "{483DD920-D82E-4186-8CB6-3F86E3600152}"
 EndProject
@@ -17,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{
 		.github\workflows\nuget.yml = .github\workflows\nuget.yml
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Acceptance.Test", "Acceptance.Test\Acceptance.Test.csproj", "{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autofac.Example", "Autofac.Example\Autofac.Example.csproj", "{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,25 +24,29 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB5C19F2-4FF6-4857-89D9-8402B82F40F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB5C19F2-4FF6-4857-89D9-8402B82F40F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB5C19F2-4FF6-4857-89D9-8402B82F40F3}.PublishNuget|Any CPU.ActiveCfg = PublishNuget|Any CPU
-		{DB5C19F2-4FF6-4857-89D9-8402B82F40F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.PublishNuget|Any CPU.ActiveCfg = PublishNuget|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.PublishNuget|Any CPU.Build.0 = PublishNuget|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98B66A4-137C-427B-926A-CB3DE2F67EC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{252B8825-9450-4986-A141-66D0AA6448F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{252B8825-9450-4986-A141-66D0AA6448F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{252B8825-9450-4986-A141-66D0AA6448F9}.PublishNuget|Any CPU.ActiveCfg = PublishNuget|Any CPU
-		{252B8825-9450-4986-A141-66D0AA6448F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483DD920-D82E-4186-8CB6-3F86E3600152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{483DD920-D82E-4186-8CB6-3F86E3600152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483DD920-D82E-4186-8CB6-3F86E3600152}.PublishNuget|Any CPU.ActiveCfg = PublishNuget|Any CPU
 		{483DD920-D82E-4186-8CB6-3F86E3600152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483DD920-D82E-4186-8CB6-3F86E3600152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}.PublishNuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}.PublishNuget|Any CPU.Build.0 = Debug|Any CPU
+		{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E871703-5FD3-4B1C-9EB9-0C0FAA430FDB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}.PublishNuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}.PublishNuget|Any CPU.Build.0 = Debug|Any CPU
+		{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4FDD1A-C9A7-47F5-8B71-0813860B988B}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
